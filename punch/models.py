@@ -40,11 +40,11 @@ class Employee(models.Model):
     """
         Here we are creating our employee
 
-        airbnb_id: is a unique value and that is the register that Airbnb Have to our employee
+        project_id: is a unique value and that is the id that Project/Company have for our employee
             it should be added as the timesheet will be created with that as referance
     """
     id = models.AutoField(primary_key=True)
-    airbnb_id = models.CharField(max_length=10, blank=False, null=False, unique=True)
+    project_id = models.CharField(max_length=10, blank=False, null=False, unique=True)
     first_name = models.CharField(max_length=100, blank=False, null=False)
     last_name = models.CharField(max_length=100, blank=False, null=False)
     role = models.ForeignKey(Role, on_delete=models.PROTECT, related_name="employee_role")

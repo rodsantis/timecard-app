@@ -2,8 +2,8 @@ from django.contrib import admin
 from punch.models import Employee, Skill, Role, Market
 
 class EmployeeAdmin(admin.ModelAdmin):
-    list_display = ("airbnb_id", "first_name", "last_name", "role", "skill", "market", "active")
-    search_fields = ("airbnb_id", "first_name", "last_name", "role", "skill", "market", "active")
+    list_display = ("project_id", "first_name", "last_name", "role", "skill", "market", "active")
+    search_fields = ("project_id", "first_name", "last_name", "role", "skill", "market", "active")
 
 
 class RoleAdmin(admin.ModelAdmin):
