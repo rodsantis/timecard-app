@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+    {% block title %}
+        TimeCard
+    {% endblock %}
+
+    {% block body %}
+        <div class="d-flex justify-content-center align-items-center min-vh-100">
+            <div class="row row-cols-1 w-100 justify-content-center">
+                <div class="col-sm-7">
+                    <div class="card text-center py-5 border border-secondary" style="background-color: #fefae0;">
+                        <div class="card-body">
+                            <!-- Here I want to try to update the title information accordingly with what needs to happne:
+                                example: If employee have already punched in, it should show punch out or lunch in/lunch out -->
+                            <h5 class="card-title">Punch in/out</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Just click once in the respective button to register your input.</h6>
+                            <p class="card-text">Please select one of the following:</p>
+                            <!-- The form is yet a template with just the structure in place.
+                                    need to make the interaction and validation with back end yet so that the buttons will change
+                                    its valus as per the same behaiviour with the title
+                                    If the Punch in wasn't done introduce a check so that the punch out is not visible -->
+                            <form method="post" action="/default-endpoint" class="py-5">
+                                <button class="btn btn-primary btn-lg" type="submit" name="action" value="save">Punch In</button>
+                                <button class="btn btn-primary btn-lg" type="submit" name="action" value="delete" formaction="/delete-endpoint">Punch Out</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
