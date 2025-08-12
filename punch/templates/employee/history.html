@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Punch History
+{% endblock %}
+
+{% block body %}
+    <!-- Here will be displayed the employeed punch history row by row with possibility of color change accordingly with conditions set as for example if compared to the schedule have worked all the hours -->
+
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-success">Worked</li>
+        <li class="list-group-item list-group-item-success">Worked</li>
+        <li class="list-group-item list-group-item-success">Worked</li>
+        <li class="list-group-item list-group-item-danger">Didn't Work</li>
+        <li class="list-group-item list-group-item-danger">Didn't Work</li>
+        <li class="list-group-item list-group-item-success">Worked</li>
+    </ul>
+{% endblock %}

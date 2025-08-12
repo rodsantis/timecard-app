@@ -11,3 +11,17 @@ def index(request):
         as per right now it will be render only the employee path
     """
     return render(request, 'employee/index.html')
+
+
+def punch_history(request):
+    """
+        This function will be returning the page in which we will display all the past punches of and employee. If the employee have worked all the hours that was shceduled it will show up as a Green line, otherwise red.
+    """
+    return render(request, 'employee/history.html')
+
+
+def schedule(request):
+    """
+        This function should return the schedule of the employee so that it could be checked in the app.
+    """
+    return render(request, 'employee/schedule.html')
